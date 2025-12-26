@@ -7,7 +7,16 @@ const Button = ({ onClick, children }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+      className="
+        px-4 py-2 rounded-lg font-medium
+        transition-all duration-300
+        hover:scale-[1.02]
+        active:scale-95
+      "
+      style={{
+        backgroundColor: "var(--primary)",
+        color: "var(--primary-text)",
+      }}
     >
       {children}
     </button>

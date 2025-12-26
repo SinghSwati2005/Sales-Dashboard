@@ -7,11 +7,20 @@ interface InputProps {
 const Input = ({ value, onChange, placeholder }: InputProps) => {
   return (
     <input
-      type="text"
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
-      className="border p-2 rounded w-full"
+      className="
+        w-full px-4 py-2 rounded-lg
+        border outline-none
+        transition-all duration-300
+        focus:ring-2 focus:ring-blue-500
+      "
+      style={{
+        backgroundColor: "var(--card)",
+        color: "var(--text)",
+        borderColor: "var(--border)",
+      }}
     />
   );
 };
